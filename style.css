@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+:root {
+    --ps-blue: #0070D1;
+    --ps-red: #D53B00;
 }
 
 body {
@@ -145,11 +151,11 @@ body {
 }
 
 .btn-blue{
-    background-color: rgb(40, 40, 243);
+    background-color: var(--ps-blue);
 }
 
 .btn-orange{
-    background-color: orangered;
+    background-color: var(--ps-red);
 }
 
 .disc-card-container{
@@ -226,7 +232,7 @@ body {
 }
 
 .playstation-btn{
-    background-color: blue;
+    background-color: var(--ps-blue);
     color: white;
     width: auto;
     font-size: 18px;
@@ -264,7 +270,7 @@ body {
 
 .btn-prev,
 .btn-next {
-    background-color: rgba(0, 0, 255, 0.7);
+    background-color: var(--ps-blue);
     color: white;
     border: none;
     width: 40px;
@@ -427,7 +433,7 @@ p {
 
 /* INTERACTIVITY */
 .pill:not(.active):hover {
-    color: #0070CC;
+    color: var(--ps-blue);
 }
 
 .grid-container:hover:has(.grid-item:hover) .grid-item:not(:hover)  {
@@ -451,7 +457,7 @@ p {
 }
 
 .testing {
-    background-color: blue;
+    background-color: var(--ps-blue);
 }
 
 .anniversary{
@@ -487,7 +493,7 @@ p {
 }
 
 .ani-btn button{
-    background-color: blue;
+    background-color: var(--ps-blue);
     color: white;
     width: auto;
     font-size: 14px;
@@ -631,7 +637,8 @@ p {
 
 /* PLAYSTATION STORE */
 .playstation-store {
-    height: 200vh;
+    min-height: 200vh;
+    height: auto;
 }
 
 .playstation-store p {
@@ -667,7 +674,7 @@ p {
     margin-top: 26px;
     padding: 10px 14px;
     width: 112px;
-    background-color: #D53B00;
+    background-color: var(--ps-red);
     color: #fff;
     border-radius: 25px;
     border: transparent;
@@ -675,7 +682,7 @@ p {
 
 .discount-btn:hover {
     border: 2px solid #fff;
-    outline: 2px solid #D53B00;
+    outline: 2px solid var(--ps-red);
 } 
 
 .discount-img {
@@ -694,7 +701,7 @@ p {
 }
 
 .playstation-blog {
-    padding-top: 42px;
+    padding-top: 120px;
 }
 
 .playstation-blog h2 {
@@ -705,40 +712,30 @@ p {
     overflow: hidden;
     width: 100%;
     position: relative;
-    height: 500px;
+    min-height: 500px;
+    height: auto;
+}
+
+.blog-carousel-btn:hover {
+    border: 2px solid #fff;
+    outline: 2px solid var(--ps-blue);
 }
 
 .blog-carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     width: 42px;
     height: 42px;
     border-radius: 100%;
-    background-color: #0070CC;
+    background-color: var(--ps-blue);
     color: #fff;
     border: transparent;
 }
 
 .blog-carousel-btn:hover {
     border: 2px solid #fff;
-    outline: 2px solid #0070CC;
-}
-
-.blog-carousel-btn {
-    position: absolute;
-    top: 20%;
-    width: 42px;
-    height: 42px;
-    border-radius: 100%;
-    background-color: #0070CC;
-    color: #fff;
-    border: transparent;
-}
-
-.blog-carousel-btn:hover {
-    border: 2px solid #fff;
-    outline: 2px solid #0070CC;
+    outline: 2px solid var(--ps-blue);
 }
 
 .carousel-next {
@@ -746,11 +743,14 @@ p {
 }
 
 .blog-card-holder {
+    padding: 50px 0 20px 0;
     display: flex;
     gap: 14px;
     height: inherit;
     overflow: hidden;
     scroll-behavior: smooth;
+    margin-bottom: 28px;
+    /* background-color: red; */
 }
 
 .blog-card {
@@ -758,6 +758,7 @@ p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 25px;
+    background-color: #fcfcfc;
 }
 
 .blog-card:hover {
@@ -767,7 +768,7 @@ p {
 
 .blog-card-img {
     width: 375px;
-    height: 211px;
+    height: auto;
     padding: 7px;
 }
 
@@ -805,6 +806,12 @@ p {
 .team-member {
     height: 60px;
     display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.team-member img {
+    height: 66.67%;
 }
 
 
@@ -819,6 +826,19 @@ p {
 
 .member-name {
     font-weight: bolder;
+}
+
+.blog-card-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 50px;
+}
+
+.card-pagination {
+    width: 14px;
+    height: 2px;
+    background-color: #7e7d7d;
 }
 
 
